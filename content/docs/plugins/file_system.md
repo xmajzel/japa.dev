@@ -44,7 +44,7 @@ Once the plugin has been registered, you can access the `fs` property from the [
 
 ```ts
 test('read rc file', async ({ fs }) => {
-  await fs.writeJSON('rc.json', {
+  await fs.createJson('rc.json', {
     foo: 'bar'
   })
 
@@ -318,7 +318,7 @@ Create a file at a given location. The missing directories will be created autom
 
 ```ts
 test('read rc file', async ({ fs }) => {
-  await fs.write('rc.json', JSON.stringify({
+  await fs.create('rc.json', JSON.stringify({
     foo: 'bar'
   }))
 })
